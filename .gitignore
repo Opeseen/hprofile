@@ -2,5 +2,5 @@
 # !.mvn/wrapper/maven-wrapper.jar
 # !**/src/main/**/target/
 # !**/src/test/**/target/
-*application.properties
+# *application.properties
 *.vscode
