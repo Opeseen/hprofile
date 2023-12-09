@@ -6,6 +6,12 @@ jobs:
   Testing:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup Java 11
+        uses: actions/checkout@v3
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+      
       - name: Code checkout
         uses: actions/checkout@v4
 
@@ -14,12 +20,6 @@ jobs:
       
       - name: MVN checkstyle
         run: mvn checkstyle:checkstyle
-
-      - name: Setup Java 11
-        uses: actions/checkout@v3
-        with:
-          distribution: 'temurin'
-          java-version: '11'
 
       # Setup sonar-scanner
       - name: Setup SonarQube
